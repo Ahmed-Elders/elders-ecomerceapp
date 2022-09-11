@@ -140,6 +140,7 @@ a {
 }
 
 .section {
+  margin-top: 30px;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -321,6 +322,11 @@ footer {
 footer img {
   fill: white;
   padding: 10px;
+}
+@media (max-width: 500px) {
+  footer img {
+    display: none;
+  }
 }
 
 .cart {
