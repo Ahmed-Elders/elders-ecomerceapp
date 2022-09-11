@@ -1,0 +1,92 @@
+@import './global';
+.section {
+  @include flex(space-around, center);
+  flex-wrap: wrap;
+  gap: 60px;
+ 
+  padding: 50px;
+
+  @media (max-width: 500px){
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    
+  }
+  &-left{
+    width: min(100vw, 350px);
+    &-main {
+      overflow: hidden;
+      border-radius: 15px;
+      width: 100%;
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    &-imgs {
+      @include flex(space-between, center);
+      gap: 10px;
+      width: 100%;
+      margin-top: 10px;
+      position: relative;
+      
+      
+      img{
+        width: 70px;
+        height: auto;
+        object-fit: cover;
+        overflow:hidden;
+        border-radius: 15px;
+        cursor: pointer;
+        transition: all 250ms linear;
+        &:hover {
+          scale: 1.05;
+        }
+       }
+    }
+  }
+
+ 
+}
+
+
+.try {
+  overflow: hidden;
+  // a {
+  //   position: relative;
+  //   &:hover {
+  //     &::before {
+  //       content: '';
+  //       position: absolute;
+  //       top: -50;
+  //       left: 0;
+  //       width: 70px;
+  //       height: 70px;
+  //       background-color: rgba(80, 79, 79, 0.349);
+  //       z-index: 100;
+  //       border-radius: 15px;
+  //     }
+  //   }
+  // }
+
+ 
+  &:focus {
+    .overlay {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(80, 79, 79, 0.349);
+      z-index: 100;
+      border-radius: 15px;
+    }
+
+  }
+}
+a{
+    img{
+      &:focus {
+        border: 2px solid orangered;
+      }
+  }
+
+}

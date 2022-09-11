@@ -1,0 +1,59 @@
+@import './navbar';
+
+.aside {
+  position: absolute;
+  background-color: white;
+  width: 200px;
+  height: 100vh;
+  z-index: 100;
+  left: 0px;
+  top: 0;
+  display: none; // make it flex onclicking it
+  flex-direction: column;
+  padding-top: 30px;
+  padding-right: 30px;
+  // display: none;
+
+ img {
+  width: 20px;
+  align-self: end;
+  cursor: pointer;
+ }
+
+ &_list {
+  margin: 0;
+  padding: 0;
+  &-item {
+    padding: 10px 5px;
+    position: relative;
+    transition: all 250ms linear;
+    a{
+      transition: all 250ms linear;
+      padding: 20px;
+      font-size: 16px;
+      color: #555;
+      text-align: center;
+      &:focus{
+        color: #222;
+        font-weight: 400;
+        &::before{
+          content: '';
+          position: absolute;
+          text-align: center;
+          bottom: 5px;
+          left: 10%;
+          width: 80%;
+          height: 1px;
+          background-color: $primary-color;
+          border-radius: $radius;
+        }
+      }
+    }
+  }
+
+  
+}
+}
+
+.aside_list{
+}

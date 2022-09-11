@@ -1,0 +1,38 @@
+$font: 16px;
+$primary-color: hsl(26, 100%, 55%); // dark
+$secondary-color: hsl(25, 100%, 94%);// pale
+$radius: 6px;
+ 
+
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Kumbh Sans', Helvetica, Arial, sans-serif;
+}
+ul{
+  list-style-type: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+// -------------------------
+// mixins
+
+@mixin flex($justify, $align) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  
+}

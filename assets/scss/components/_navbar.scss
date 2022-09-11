@@ -1,0 +1,114 @@
+@import './global';
+nav {
+  @include flex(space-around, center);
+  .left {
+    @include flex(space-between, center);
+    &-close {
+      display: block;
+      padding: 10px 20px 0;
+      cursor: pointer;
+      @media (min-width: 720px){
+        & {
+          display: none;
+        }}
+    }
+    &-logo{
+      height: 70px;
+      padding-top: 15px;
+      font-weight: 700;
+      font-size: 30px;
+    }
+    &_list{
+        display: none;
+
+        @media (min-width: 720px){
+     
+          &{
+            @include flex(center, space-between);
+            &-item {
+              a{
+                padding: 20px;
+                font-size: 16px;
+                color: #555;
+                position: relative;
+                text-align: center;
+                &:focus{
+                  color: #222;
+                  font-weight: 400;
+                  &::before{
+                    content: '';
+                    position: absolute;
+                    text-align: center;
+                    bottom: -7px;
+                    left: 10%;
+                    width: 80%;
+                    height: 3px;
+                    background-color: $primary-color;
+                    border-radius: $radius;
+                  }
+                }
+              }
+            }
+          }
+       
+      }
+      }
+  }
+  // --------------------------------
+  // start the right part-------------
+  .right{
+    @include flex(center, center);
+    gap: 20px;
+    cursor: pointer;
+    &_cart{
+      position: relative;
+      
+      &::before {
+        content: attr(data-cards);
+        position: absolute;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        left: 10px;
+        top: -5px;
+        width: 15px;
+        height: 10px;
+        color: white;
+        background-color: rgba(255, 68, 0, 0.662);
+        font-size: 8px;
+        font-weight: bold;
+        border-radius: 50%;
+      }
+      img{
+        width: 17px;
+        position: relative;
+      }
+      &:focus .cart {
+        display: block;
+        position: absolute;
+        
+      }
+    }
+    &_user-picture{
+
+      img{
+        width: 30px;
+        border: 2px solid rgba(255, 68, 0, 0.562);
+        border-radius: 50%;
+        
+      }
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    text-align: center;
+
+    top: 70px;
+    width: 80%;
+    height: 2px;
+    background-color: #ddd;
+  }
+}
+
