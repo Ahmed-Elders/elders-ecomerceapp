@@ -1,5 +1,6 @@
 @import './global';
 .section {
+  margin-top: 30px;
   @include flex(space-around, center);
   flex-wrap: wrap;
   gap: 60px;
